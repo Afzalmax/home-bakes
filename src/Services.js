@@ -1,5 +1,19 @@
 
-
+import hot1 from './media/pizzaSB.jpg'
+import hot2 from './media/hot2.jpg'
+import hot3 from './media/hot3.jpg'
+import cake1 from './media/bforest.jpg'
+import cake2 from './media/chococake.jpg'
+import cake3 from './media/pistacake.jpg'
+import brownie1 from './media/brow.jpg'
+import brownie2 from './media/browniebox.jpeg'
+import brownie3 from './media/BrownieSB.jpg'
+import custom1 from './media/customSB.jpg'
+import custom2 from './media/CUSTOMSB2.jpg'
+import custom3 from './media/CUSTOMSB3.jpg'
+import special1 from './media/specialSB.jpg'
+import special2 from './media/specialSB2.jpg'
+import special3 from './media/specialSB3.jpg'
 import React from 'react';
 
 
@@ -54,19 +68,19 @@ const Services = () => {
     <br></br>
     <br/>
 
-    <h2 class="text-center text-5xl text-pink-600 font-semibold whitespace-pre-line text-gray-900 dark:text-white">OUR DISHES AND SERVICES </h2>
-    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+    <h2 class="mt-5 text-center text-5xl text-pink-600 font-semibold whitespace-pre-line text-gray-900 dark:text-white">OUR DISHES AND SERVICES </h2>
     
-     <div className="grid grid-cols-3 md:grid-cols-3 ">
+    
+     <div className="mt-10 grid grid-cols-3 md:grid-cols-3 ">
      {serviceData.map((category, index) => (
         <div key={index} className="relative h-120 p-3">
           {category.image.map((img, idx) => (
-          <div className="mx-auto w-96" style={{ scrollSnapType: 'x mandatory' }}>
-           
+          <div key={idx}  className="mx-auto w-96" style={{ scrollSnapType: 'x mandatory' }}>
+           <br></br><br></br><br></br><br></br>
             <div className="">
               
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-1" checked />
-              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-1" defaulthecked />
+              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
               <img className="h-64 w-96 rounded-t-lg" src={img} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
                   <p className="text-center text-gray-700">{category.name}</p>
@@ -87,9 +101,9 @@ const Services = () => {
               </div>
             </div>
             <div className="">
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-2" checked />
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-2" defaultChecked />
 
-              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
+              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
                 <img className="h-64 w-96 rounded-t-lg" src={img} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
                   <p className="text-center text-gray-700">{category.name}</p>
@@ -110,9 +124,9 @@ const Services = () => {
               </div>
             </div>
             <div className="">
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-3" checked />
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-3" defaultChecked />
 
-              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
+              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
                 <img className="h-64 w-96 rounded-t-lg" src={img} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
                   <p className="text-center text-gray-700">{category.name}</p>
@@ -144,9 +158,9 @@ const Services = () => {
   <div className="mx-auto w-96" style={{ scrollSnapType: 'x mandatory' }}>
 
             <div className="">
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-4" checked />
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-4" defaultchecked />
 
-              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
+              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
                 <img className="h-64 w-96 rounded-t-lg" src={special1} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
                   <p className="text-center text-gray-700">SPECIAL FLAVOURS</p>
@@ -167,9 +181,9 @@ const Services = () => {
               </div>
             </div>
             <div className="">
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-5" checked />
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-5" defaultchecked />
 
-              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
+              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
                 <img className="h-64 w-96 rounded-t-lg" src={special2} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
                   <p className="text-center text-gray-700">SPECIAL FLAVOURS</p>
@@ -190,9 +204,9 @@ const Services = () => {
               </div>
             </div>
             <div className="">
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-6" checked />
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-6" defaultchecked />
 
-              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
+              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
                 <img className="h-64 w-96 rounded-t-lg" src={special3} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
                   <p className="text-center text-gray-700">SPECIAL FLAVOURS</p>
@@ -218,9 +232,9 @@ const Services = () => {
           <div className="mx-auto w-96" style={{ scrollSnapType: 'x mandatory' }}>
 
             <div className="">
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-7" checked />
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-7" defaultchecked />
 
-              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
+              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
                 <img className="h-64 w-96 rounded-t-lg" src={cake1} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
                   <p className="text-center text-gray-700">NORMAL CAKES</p>
@@ -241,9 +255,9 @@ const Services = () => {
               </div>
             </div>
             <div className="">
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-8" checked />
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-8" defaultchecked />
 
-              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
+              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
                 <img className="h-64 w-96 rounded-t-lg" src={cake2} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
                   <p className="text-center text-gray-700">NORMAL CAKES</p>
@@ -264,9 +278,9 @@ const Services = () => {
               </div>
             </div>
             <div className="">
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-9" checked />
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-9" defaultchecked />
 
-              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
+              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
                 <img className="h-64 w-96 rounded-t-lg" src={cake3} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
                   <p className="text-center text-gray-700">NORMAL CAKES</p>
@@ -292,9 +306,9 @@ const Services = () => {
           <div className="mx-auto w-96" style={{ scrollSnapType: 'x mandatory' }}>
 
             <div className="">
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-10" checked />
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-10" defaultchecked />
 
-              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
+              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
                 <img className="h-64 w-96 rounded-t-lg" src={hot1} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
                   <p className="text-center text-gray-700">Text for image 1</p>
@@ -315,9 +329,9 @@ const Services = () => {
               </div>
             </div>
             <div className="">
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-11" checked />
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-11" defaultchecked />
 
-              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
+              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
                 <img className="h-64 w-96 rounded-t-lg" src={hot2} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
                   <p className="text-center text-gray-700">Text for image 1</p>
@@ -338,9 +352,9 @@ const Services = () => {
               </div>
             </div>
             <div className="">
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-12" checked />
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-12" defaultchecked />
 
-              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
+              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
                 <img className="h-64 w-96 rounded-t-lg" src={hot3} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
                   <p className="text-center text-gray-700">Text for image 1</p>
@@ -366,9 +380,9 @@ const Services = () => {
           <div className="mx-auto w-96" style={{ scrollSnapType: 'x mandatory' }}>
 
             <div className="">
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-13" checked />
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-13" defaultchecked />
 
-              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
+              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
                 <img className="h-64 w-96 rounded-t-lg" src={brownie1} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
                   <p className="text-center text-gray-700">Text for image 1</p>
@@ -389,9 +403,9 @@ const Services = () => {
               </div>
             </div>
             <div className="">
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-14" checked />
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-14" defaultchecked />
 
-              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
+              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
                 <img className="h-64 w-96 rounded-t-lg" src={brownie2} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
                   <p className="text-center text-gray-700">Text for image 1</p>
@@ -412,9 +426,9 @@ const Services = () => {
               </div>
             </div>
             <div className="">
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-15" checked />
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-15" defaultchecked />
 
-              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
+              <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
                 <img className="h-64 w-96 rounded-t-lg" src={brownie3} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
                   <p className="text-center text-gray-700">Text for image 1</p>
