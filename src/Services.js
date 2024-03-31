@@ -1,19 +1,5 @@
 
-import hot1 from './media/pizzaSB.jpg'
-import hot2 from './media/hot2.jpg'
-import hot3 from './media/hot3.jpg'
-import cake1 from './media/bforest.jpg'
-import cake2 from './media/chococake.jpg'
-import cake3 from './media/pistacake.jpg'
-import brownie1 from './media/brow.jpg'
-import brownie2 from './media/browniebox.jpeg'
-import brownie3 from './media/BrownieSB.jpg'
-import custom1 from './media/customSB.jpg'
-import custom2 from './media/CUSTOMSB2.jpg'
-import custom3 from './media/CUSTOMSB3.jpg'
-import special1 from './media/specialSB.jpg'
-import special2 from './media/specialSB2.jpg'
-import special3 from './media/specialSB3.jpg'
+import serviceData  from './data/ServicesData';
 import React from 'react';
 
 
@@ -24,19 +10,23 @@ const Services = () => {
     <br></br>
     <br></br>
     <br/>
+
     <h2 class="text-center text-5xl text-pink-600 font-semibold whitespace-pre-line text-gray-900 dark:text-white">OUR DISHES AND SERVICES </h2>
     <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-     <div className="grid grid-rows-1 md:grid-cols-3 ">
-        <div className="relative h-1/2  p-3">
+    
+     <div className="grid grid-cols-3 md:grid-cols-3 ">
+     {serviceData.map((category, index) => (
+        <div key={index} className="relative h-120 p-3">
+          {category.image.map((img, idx) => (
           <div className="mx-auto w-96" style={{ scrollSnapType: 'x mandatory' }}>
-
+           
             <div className="">
+              
               <input className="peer sr-only" type="radio" name="carousel" id="carousel-1" checked />
-
               <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
-                <img className="h-64 w-96 rounded-t-lg" src={custom1} alt="" />
+              <img className="h-64 w-96 rounded-t-lg" src={img} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
-                  <p className="text-center text-gray-700">CUSTOM CAKES</p>
+                  <p className="text-center text-gray-700">{category.name}</p>
                 </div>
 
                 <div className="absolute top-1/2 z-20 flex w-full justify-between">
@@ -57,9 +47,9 @@ const Services = () => {
               <input className="peer sr-only" type="radio" name="carousel" id="carousel-2" checked />
 
               <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
-                <img className="h-64 w-96 rounded-t-lg" src={custom2} alt="" />
+                <img className="h-64 w-96 rounded-t-lg" src={img} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
-                  <p className="text-center text-gray-700">CUSTOM CAKES</p>
+                  <p className="text-center text-gray-700">{category.name}</p>
                 </div>
 
                 <div className="absolute top-1/2 z-20 flex w-full justify-between">
@@ -80,9 +70,9 @@ const Services = () => {
               <input className="peer sr-only" type="radio" name="carousel" id="carousel-3" checked />
 
               <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100">
-                <img className="h-64 w-96 rounded-t-lg" src={custom3} alt="" />
+                <img className="h-64 w-96 rounded-t-lg" src={img} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
-                  <p className="text-center text-gray-700">CUSTOM CAKES</p>
+                  <p className="text-center text-gray-700">{category.name}</p>
                 </div>
 
                 <div className="absolute top-1/2 z-20 flex w-full justify-between">
@@ -99,9 +89,15 @@ const Services = () => {
                 </div>
               </div>
             </div>
+            
             </div>
+          ))}
             </div>
-  <div className="relative h-1/2 bg-gray-70 p-3">
+            ))}
+            </div>
+            
+{/*
+  <div className="relative h-120 bg-gray-70 p-3">
   <div className="mx-auto w-96" style={{ scrollSnapType: 'x mandatory' }}>
 
             <div className="">
@@ -175,7 +171,7 @@ const Services = () => {
             </div>
             </div>
             </div>
-            <div className="relative h-1/2 bg-gray-70 p-3">
+            <div className="relative h-120 bg-gray-70 p-3">
           <div className="mx-auto w-96" style={{ scrollSnapType: 'x mandatory' }}>
 
             <div className="">
@@ -396,8 +392,8 @@ const Services = () => {
               </div>
             </div>
             </div>
-            </div>
-</div>
+  </div>*/}
+  
     </>
    
   )
