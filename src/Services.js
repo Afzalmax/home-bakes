@@ -1,10 +1,53 @@
 
-import serviceData  from './data/ServicesData';
+
 import React from 'react';
 
 
 const Services = () => {
- 
+  const serviceData = [
+    {
+        name: "CUSTOMIZED CAKE",
+        image:[ 
+            custom1,
+            custom2,
+            custom3,
+        ],
+      },
+    {
+        name:"HOT PICKS",
+        image:[
+            hot1,
+            hot2,
+            hot3,
+        ],
+    },
+    {
+        name:"CAKES",
+        image:[
+            cake1,
+            cake2,
+            cake3,
+        ],
+    },
+    {
+        name:"BROWNIES",
+        image:[
+            brownie1,
+            brownie2,
+            brownie3,
+        ],
+    },
+    {
+        name:"SPECIAL",
+        image:[
+            special1,
+            special2,
+            special3,
+        ],
+    }
+
+]
+
   return (
     <>
     <br></br>
