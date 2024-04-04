@@ -71,11 +71,11 @@ const Services = () => {
     <h2 class="mt-5 text-center text-5xl text-pink-600 font-semibold whitespace-pre-line text-gray-900 dark:text-white">OUR DISHES AND SERVICES </h2>
     
     
-     <div className="mt-10 grid grid-cols-3 md:grid-cols-3 ">
+     <div className="mt-10 grid grid-cols-2 md:grid-cols-3 sm:grid-cols-2 ">
      {serviceData.map((category, index) => (
         <div key={index} className="relative h-120 p-3">
           {category.image.map((img, idx) => (
-          <div key={idx}  className="mx-auto w-96" style={{ scrollSnapType: 'x mandatory' }}>
+          <div key={idx}  className="mx-auto w-full" style={{ scrollSnapType: 'x mandatory' }}>
            <br></br><br></br><br></br><br></br>
             <div className="">
               
