@@ -71,7 +71,7 @@ const Services = () => {
     <h2 class="mt-5 text-center text-5xl text-pink-600 font-semibold whitespace-pre-line text-gray-900 dark:text-white">OUR DISHES AND SERVICES </h2>
     
     
-     <div className="mt-10 grid grid-cols-2 md:grid-cols-3 sm:grid-cols-2 ">
+     <div className="mt-10 grid grid-cols-1 md:grid-cols-3 ">
      {serviceData.map((category, index) => (
         <div key={index} className="relative h-120 p-3">
           {category.image.map((img, idx) => (
@@ -79,7 +79,7 @@ const Services = () => {
            <br></br><br></br><br></br><br></br>
             <div className="">
               
-              <input className="peer sr-only" type="radio" name="carousel" id="carousel-1" defaulthecked />
+              <input className="peer sr-only" type="radio" name="carousel" id="carousel-1" defaultChecked />
               <div className="absolute left-1/2 top-1/2 z-0 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white opacity-100 shadow-lg transition-all duration-300 peer-defaultchecked:z-10 peer-defaultchecked:opacity-100">
               <img className="h-64 w-96 rounded-t-lg" src={img} alt="" />
                 <div className="bg-gray-200 p-2 rounded-b-lg">
